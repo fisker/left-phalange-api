@@ -46,7 +46,10 @@ function testRunner(testObject) {
   test('stringify', t => {
     t.is(stringify(testObject.data, testObject.type), testObject.string)
     t.is(
-      stringify(testObject.data, testObject.type, {pretty: true}),
+      stringify(testObject.data, {
+        type: testObject.type,
+        pretty: true,
+      }),
       testObject.prettyString
     )
   })

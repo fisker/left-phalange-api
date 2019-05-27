@@ -1,15 +1,14 @@
 import * as parser from './parser'
 import {getFileType} from './utils'
 
-function parse(string, type, options = {}) {
-  if (typeof type === 'object') {
-    options = type
-    type = ''
+function parse(string, options = {}) {
+  if (typeof options === 'string') {
+    options = {
+      type: options,
+    }
   }
 
-  if (!type && options && options.filename) {
-    type = getFileType(options.filename)
-  }
+  const {type = getFileType(options.filename) || 'yaml'} = options
 
   return parser[type](string, options)
 }

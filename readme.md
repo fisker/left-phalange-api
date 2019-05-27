@@ -14,59 +14,98 @@ npm install --global left-phalange-api
 import {parse, load, stringify} from 'left-phalange-api'
 ```
 
-### parse(string, type[, options])
-
-- string
-  - type: `String`
-  - string to parse
-- type
-  - type: `String`
-  - data type of `string`
-  - should be one of `ini`, `json`, `json5`, `toml`, `yaml`
-- options
-  - optional
-  - type: `Object`
-- options.filename
-  - filename
-
-examples:
-
-```js
-parse('{"left": "phalange"}', 'json')
-parse('{"left": "phalange"}', {filename: 'path/to/data.json'})
-parse('{"left": "phalange"}', 'yaml', {filename: 'path/to/data'})
-```
-
-### load(file[, type])
+### load(file[, options])
 
 - file
-  - data file path
-- type
-  - optional
-  - data type of `file`
-  - should be one of `cjs`, `esm`, `ini`, `js`, `json`, `json5`, `toml`, `yaml`
+  - Data file path to load
+- options
+  - Optional
+  - Type `Object` | `String`
+  - Default `{}`
+- options(`String`)
+  - `options.type`
+- options.type
+  - Data type of `file`
+  - Should be one of `cjs`, `esm`, `ini`, `js`, `json`, `json5`, `toml`, `yaml`
 
 examples:
 
 ```js
 load('path/to/data.json')
+
 load('path/to/data', 'yaml')
+
+load('path/to/data', {type: 'toml'})
 ```
 
-### stringify(data[, type[, options]])
+### parse(string[, options])
+
+- string
+  - type: `String`
+  - string to parse
+- options
+  - Optional
+  - Type `Object` | `String`
+  - Default `{}`
+- options(`String`)
+  - `options.type`
+- options.type
+  - Data type of `string`
+  - Default `yaml`
+  - Should be one of `ini`, `json`, `json5`, `toml`, `yaml`
+- options.filename
+  - Filename displayed in the error message.
+
+examples:
+
+```js
+parse('{"left": "phalange"}')
+
+parse('{"left": "phalange"}', 'json')
+
+parse('left = "phalange"', {type: 'toml'})
+
+parse('left = phalange', {filename: 'path/to/data.yml'})
+```
+
+### stringify(data[, options])
 
 - data
-  - data to stringify
-- type
-  - optional, default `json`
-  - data type
-  - should be one of `ini`, `json`, `json5`, `toml`, `yaml`
+  - Data to stringify
+- options
+  - Optional
+  - Type `Object` | `String` | `Boolean`
+  - Default `{}`
+- options(`String`)
+  - `options.type`
+- options(`Boolean`)
+  - `options.pretty`
+- options.type
+  - Data type of `string`
+  - Default `json`
+  - Should be one of `cjs`, `esm`, `ini`, `json`, `json5`
+- options.pretty
+  - Pretty output
+  - Default `false`
 
 examples:
 
 ```js
 stringify({left: 'phalange'})
-stringify({left: 'phalange'}, 'json')
+// {"left": "phalange"}
+
+stringify({left: 'phalange'}, 'toml')
+// left = "phalange"
+
+stringify({left: 'phalange'}, true)
+// {
+//   "left": "phalange"
+// }
+
+stringify({left: 'phalange'}, {type: 'json5', pretty: true})
+// {
+//   left: 'phalange',
+// }
 ```
 
 ## License
