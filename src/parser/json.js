@@ -1,7 +1,7 @@
 import parseJson from 'parse-json'
 
-function jsonParser(content, {filename = ''} = {}) {
+function jsonParse(content, {filename = ''} = {}) {
   return filename ? parseJson(content, filename) : parseJson(content)
 }
 
-export default jsonParser
+export default jsonParse

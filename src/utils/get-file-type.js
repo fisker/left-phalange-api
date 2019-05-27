@@ -1,14 +1,14 @@
 import {extname} from 'path'
 
 const fileTypes = {
-  mjs: 'esm',
-  yml: 'yaml',
+  '.mjs': 'esm',
+  '.yml': 'yaml',
 }
 
 function getFileType(file) {
-  const extension = extname(file).slice(1)
+  const extension = extname(file)
 
-  return fileTypes[extension] || extension
+  return fileTypes[extension] || extension.slice(1)
 }
 
 export default getFileType

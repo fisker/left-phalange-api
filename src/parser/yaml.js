@@ -1,1 +1,7 @@
-export {safeLoad as default} from 'js-yaml'
+import {safeLoad} from 'js-yaml'
+
+function yamlParse(content, {filename = ''} = {}) {
+  return safeLoad(content, {filename})
+}
+
+export default yamlParse

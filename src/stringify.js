@@ -1,7 +1,7 @@
-import * as printers from './printer'
+import * as stringifier from './stringifier'
 
-function stringify(data, {type = 'json', ...options}) {
-  return printers[type](data, options)
+function stringify(data, type, options) {
+  return stringifier[type](data, options)
 }
 
 export default stringify

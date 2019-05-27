@@ -1,9 +1,9 @@
-import * as loaders from './loader'
+import * as loader from './loader'
 import {getFileType} from './utils'
 
-function loadFile(file, type) {
+function load(file, type) {
   type = type || getFileType(file)
-  return loaders[type](file)
+  return loader[type](file)
 }
 
-export default loadFile
+export default load

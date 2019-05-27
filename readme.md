@@ -1,63 +1,73 @@
-# left-phalange
+# left-phalange-api
 
-> Convert data between CommonJS, ESModule, INI, JSON, JSON5, TOML, YAML
+> CommonJS, ESModule, INI, JSON, JSON5, TOML, YAML data loader, parser and stringifier
 
 ## Install
 
 ```sh
-npm install --global left-phalange
-```
-
-## Quick start
-
-```sh
-curl -L https://unpkg.com/left-phalange/package.json | lp -o toml
+npm install --global left-phalange-api
 ```
 
 ## Usage
 
-```text
-lp --help
-
-  Usage
-    $ left-phalange <file>
-    $ lp <file>
-
-  Options
-    -i, --input           Input Data type
-    -o, --output          Output Data type
-    -p, --pretty          Pretty output
-    -C, --copy            Copy output to clipboard
-    -h, --help            Show this help info
-    -v, --version         Show version
-
-  Examples
-    $ lp data.toml > data.json
-    $ cat data.yaml | lp -p
+```js
+import {parse, load, stringify} from 'left-phalange-api'
 ```
 
-## Options
+### parse(string, type[, options])
 
-### input
+- string
+  - type: `String`
+  - string to parse
+- type
+  - type: `String`
+  - data type of `string`
+  - should be one of `ini`, `json`, `json5`, `toml`, `yaml`
+- options
+  - optional
+  - type: `Object`
+- options.filename
+  - filename
 
-- cjs (CommonJS, file only, not stdin)
-- esm (ESModule, file only, not stdin)
-- ini
-- js (CommonJS or ESModule, file only, not stdin)
-- json
-- json5
-- toml
-- yaml (default value for Stdin, `YAML` is superset of `JSON`, so it should work for `JSON` as well)
+examples:
 
-### output
+```js
+parse('{"left": "phalange"}', 'json')
+parse('{"left": "phalange"}', {filename: 'path/to/data.json'})
+parse('{"left": "phalange"}', 'yaml', {filename: 'path/to/data'})
+```
 
-- cjs
-- esm
-- ini
-- json (default)
-- json5
-- toml
-- yaml
+### load(file[, type])
+
+- file
+  - data file path
+- type
+  - optional
+  - data type of `file`
+  - should be one of `cjs`, `esm`, `ini`, `js`, `json`, `json5`, `toml`, `yaml`
+
+examples:
+
+```js
+load('path/to/data.json')
+load('path/to/data', 'yaml')
+```
+
+### stringify(data[, type[, options]])
+
+- data
+  - data to stringify
+- type
+  - optional, default `json`
+  - data type
+  - should be one of `ini`, `json`, `json5`, `toml`, `yaml`
+
+examples:
+
+```js
+stringify({left: 'phalange'})
+stringify({left: 'phalange'}, 'json')
+```
 
 ## License
 
