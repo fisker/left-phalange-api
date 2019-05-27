@@ -108,6 +108,10 @@ stringify({left: 'phalange'}, {type: 'json5', pretty: true})
 // }
 ```
 
+## Related
+
+- [left-phalange](https://github.com/fisker/left-phalange) - CLI for this module
+
 ## License
 
 MIT © [fisker Cheung](https://github.com/fisker)
