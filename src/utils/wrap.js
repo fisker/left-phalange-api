@@ -1,6 +1,4 @@
-import identify from './identify'
-
-function wrap(func, wrapper = identify) {
+function wrap(func, wrapper) {
   return function wrapped(...arguments_) {
     return wrapper(func(...arguments_))
   }
