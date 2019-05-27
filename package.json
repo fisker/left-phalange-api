@@ -3,6 +3,7 @@
   "version": "1.0.7",
   "description": "CommonJS, ESModule, INI, JSON, JSON5, TOML, YAML data loader, parser and stringifier",
   "main": "lib/index.js",
+  "module": "lib/index.mjs",
   "repository": "fisker/left-phalange-api",
   "author": {
     "name": "fisker Cheung",
