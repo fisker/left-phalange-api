@@ -16,6 +16,13 @@ test('stringify options(Boolean)', t => {
   )
 })
 
+test('parse options(Undefined)', t => {
+  t.deepEqual(
+    parse('left = phalange'),
+    parse('left = phalange', {type: 'yaml'})
+  )
+})
+
 test('parse options(Boolean)', t => {
   t.deepEqual(
     parse(`left= "phalange"`, 'toml'),
