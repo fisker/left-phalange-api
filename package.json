@@ -1,6 +1,6 @@
 {
   "name": "left-phalange-api",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "CommonJS, ESModule, INI, JSON, JSON5, TOML, YAML data loader, parser and stringifier",
   "main": "lib/index.js",
   "module": "lib/index.mjs",
