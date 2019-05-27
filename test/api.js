@@ -17,15 +17,15 @@ test('stringify options(Boolean)', t => {
 })
 
 test('parse options(Boolean)', t => {
-  t.is(
-    parse(`left: "phalange"`, 'toml'),
-    parse(`left: "phalange"`, {type: 'toml'})
+  t.deepEqual(
+    parse(`left= "phalange"`, 'toml'),
+    parse(`left= "phalange"`, {type: 'toml'})
   )
 })
 
 test('parse options.filename', t => {
-  t.is(
-    parse(`left: "phalange"`, {type: 'toml'}),
-    parse(`left: "phalange"`, {filename: 'data.toml'})
+  t.deepEqual(
+    parse(`left= "phalange"`, {type: 'toml'}),
+    parse(`left= "phalange"`, {filename: 'data.toml'})
   )
 })
