@@ -8,7 +8,9 @@ function parse(string, options = {}) {
     }
   }
 
-  const {type = getFileType(options.filename) || 'yaml'} = options
+  const {
+    type = (options.filename ? getFileType(options.filename) : '') || 'yaml',
+  } = options
 
   return parser[type](string, options)
 }
