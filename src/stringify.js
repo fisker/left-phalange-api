@@ -7,6 +7,12 @@ function stringify(data, options) {
     }
   }
 
+  if (typeof options === 'boolean') {
+    options = {
+      pretty: options,
+    }
+  }
+
   const {type = 'json'} = options
 
   return stringifier[type](data, options)
