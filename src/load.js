@@ -8,7 +8,7 @@ function load(file, options = {}) {
     }
   }
 
-  const {type = getFileType(file)} = options
+  const {type = getFileType(file) || 'yaml'} = options
 
   return loader[type](file)
 }

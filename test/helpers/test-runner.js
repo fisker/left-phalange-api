@@ -1,11 +1,6 @@
 import test from 'ava'
-import {sync as temporaryWrite} from 'temp-write'
-import {parse, load, stringify} from '../../src'
-
-function loadFileFromString(string, fileName, options) {
-  const file = temporaryWrite(string, fileName)
-  return load(file, options)
-}
+import {parse, stringify} from '../../src'
+import loadFromString from './load-from-string'
 
 function testRunner(testObject) {
   const {
@@ -41,17 +36,17 @@ function testRunner(testObject) {
   }
 
   test('load(filename)', t => {
-    t.deepEqual(loadFileFromString(string, filename), data)
+    t.deepEqual(loadFromString(string, filename), data)
   })
 
   test('load(filename, type)', t => {
-    t.deepEqual(loadFileFromString(string, 'data.xml', type), data)
+    t.deepEqual(loadFromString(string, 'data.xml', type), data)
   })
 
   if (malformed) {
     test('load(malformed)', t => {
       t.throws(() => {
-        loadFileFromString(malformed)
+        loadFromString(malformed, filename, type)
       })
     })
   }
