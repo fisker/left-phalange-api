@@ -16,23 +16,9 @@ test('stringify options(Boolean)', t => {
   )
 })
 
-test('parse options(Undefined)', t => {
+test('parse(data)', t => {
   t.deepEqual(
     parse('left = phalange'),
     parse('left = phalange', {type: 'yaml'})
-  )
-})
-
-test('parse options(Boolean)', t => {
-  t.deepEqual(
-    parse(`left= "phalange"`, 'toml'),
-    parse(`left= "phalange"`, {type: 'toml'})
-  )
-})
-
-test('parse options.filename', t => {
-  t.deepEqual(
-    parse(`left= "phalange"`, {type: 'toml'}),
-    parse(`left= "phalange"`, {filename: 'data.toml'})
   )
 })
