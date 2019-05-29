@@ -5,7 +5,7 @@
 ## Install
 
 ```sh
-npm install --global left-phalange-api
+yarn add left-phalange-api
 ```
 
 ## Usage
