@@ -87,6 +87,7 @@
     "require": "esm",
     "verbose": true,
     "helpers": [
+      "test/fixtures/**/*",
       "test/helpers/**/*"
     ]
   }
