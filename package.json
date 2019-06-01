@@ -85,6 +85,9 @@
   },
   "ava": {
     "require": "esm",
-    "verbose": true
+    "verbose": true,
+    "helpers": [
+      "test/helpers/**/*"
+    ]
   }
 }
