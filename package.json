@@ -87,7 +87,6 @@
     "temp-write": "^4.0.0"
   },
   "nyc": {
-    "all": true,
     "require": "esm",
     "reporter": [
       "lcov",
