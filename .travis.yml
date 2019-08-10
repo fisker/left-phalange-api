@@ -1,14 +1,12 @@
 language: node_js
 node_js:
   - "lts/*"
-  - "8"
-  - "10"
   - "12"
-sudo: false
+  - "10"
 cache:
   yarn: true
 before_install:
-  - npm install --global nyc yarn
+  - npm install --global yarn nyc
 install:
   - yarn
 script:
