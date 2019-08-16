@@ -25,10 +25,10 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Use Node.js
+      - name: Use Node.js ${{ matrix.NODE }}
         uses: actions/setup-node@master
         with:
-          version: ${{ matrix.NODE }}
+          node-version: ${{ matrix.NODE }}
 
       - name: Install
         run: |
