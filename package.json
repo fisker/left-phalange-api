@@ -73,7 +73,7 @@
     "@fisker/prettier-config": "1.0.21",
     "ava": "2.4.0",
     "cz-conventional-changelog": "3.0.2",
-    "eslint": "6.4.0",
+    "eslint": "6.5.0",
     "husky": "3.0.7",
     "lint-staged": "9.4.0",
     "markdownlint-cli": "0.18.0",
