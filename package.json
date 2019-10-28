@@ -2,8 +2,8 @@
   "name": "left-phalange-api",
   "version": "1.1.7",
   "description": "CommonJS, ESModule, INI, JSON, JSON5, TOML, YAML data loader, parser and stringifier",
-  "main": "lib/index.js",
-  "module": "lib/index.mjs",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "repository": "fisker/left-phalange-api",
   "author": {
     "name": "fisker Cheung",
@@ -26,7 +26,7 @@
   ],
   "license": "MIT",
   "files": [
-    "lib"
+    "dist"
   ],
   "dependencies": {
     "@iarna/toml": "2.2.3",
@@ -50,7 +50,8 @@
     "dist:npm": "np --yolo --no-yarn",
     "format": "run-p format:*",
     "format:eslint": "yarn lint:eslint --fix",
-    "format:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --write",
+    "format:markdown": "yarn lint:markdown --fix",
+    "format:prettier": "yarn lint:prettier --write",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
     "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
@@ -82,9 +83,7 @@
     "prettier": "1.18.2",
     "rollup": "1.26.0",
     "rollup-plugin-commonjs": "10.1.0",
-    "rollup-plugin-filesize": "6.2.1",
     "rollup-plugin-json": "4.0.0",
-    "rollup-plugin-node-resolve": "5.2.0",
     "temp-write": "4.0.0"
   },
   "nyc": {
