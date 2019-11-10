@@ -46,6 +46,8 @@
   "scripts": {
     "build": "run-p build:*",
     "build:js": "rollup --config",
+    "clean": "run-p clean:*",
+    "clean:dist": "del-cli dist",
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
     "format": "run-p format:*",
@@ -56,7 +58,7 @@
     "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
     "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
     "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
-    "release": "run-s lint build format test dist",
+    "release": "run-s format clean build test dist",
     "test": "ava",
     "test-coverage": "nyc ava"
   },
@@ -74,6 +76,7 @@
     "@fisker/prettier-config": "1.0.21",
     "ava": "2.4.0",
     "cz-conventional-changelog": "3.0.2",
+    "del-cli": "3.0.0",
     "eslint": "6.6.0",
     "husky": "3.0.9",
     "lint-staged": "9.4.2",
