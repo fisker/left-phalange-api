@@ -2,47 +2,33 @@
   "name": "left-phalange-api",
   "version": "1.1.9",
   "description": "CommonJS, ESModule, INI, JSON, JSON5, TOML, YAML data loader, parser and stringifier",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "repository": "fisker/left-phalange-api",
-  "author": {
-    "name": "fisker Cheung",
-    "email": "lionkay@gmail.com",
-    "url": "https://www.fiskercheung.com/"
-  },
   "keywords": [
     "data",
-    "json",
-    "yaml",
-    "json5",
-    "toml",
     "ini",
+    "json",
+    "json5",
     "load",
     "loader",
     "parse",
     "parser",
     "stringifier",
-    "stringify"
+    "stringify",
+    "toml",
+    "yaml"
   ],
+  "repository": "fisker/left-phalange-api",
   "license": "MIT",
+  "author": {
+    "name": "fisker Cheung",
+    "email": "lionkay@gmail.com",
+    "url": "https://www.fiskercheung.com/"
+  },
   "files": [
     "dist"
   ],
-  "dependencies": {
-    "@iarna/toml": "2.2.3",
-    "ansi-colors": "4.1.1",
-    "esm": "3.2.25",
-    "import-fresh": "3.2.1",
-    "ini": "1.3.5",
-    "js-yaml": "3.13.1",
-    "json5": "2.1.1",
-    "parse-json": "5.0.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "scripts": {
     "build": "run-p build:*",
     "build:js": "rollup --config",
@@ -64,11 +50,39 @@
     "test": "ava",
     "test-coverage": "nyc ava"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
-  "sideEffects": false,
+  "ava": {
+    "helpers": [
+      "test/fixtures/**/*",
+      "test/helpers/**/*"
+    ],
+    "require": "esm",
+    "verbose": true
+  },
+  "nyc": {
+    "include": [
+      "src/**"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "require": "esm"
+  },
+  "dependencies": {
+    "@iarna/toml": "2.2.3",
+    "ansi-colors": "4.1.1",
+    "esm": "3.2.25",
+    "import-fresh": "3.2.1",
+    "ini": "1.3.5",
+    "js-yaml": "3.13.1",
+    "json5": "2.1.1",
+    "parse-json": "5.0.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "8.2.0",
     "@fisker/commitlint-config": "1.1.4",
@@ -92,22 +106,8 @@
     "sort-package-json": "1.28.0",
     "temp-write": "4.0.0"
   },
-  "nyc": {
-    "require": "esm",
-    "reporter": [
-      "lcov",
-      "text"
-    ],
-    "include": [
-      "src/**"
-    ]
-  },
-  "ava": {
-    "require": "esm",
-    "verbose": true,
-    "helpers": [
-      "test/fixtures/**/*",
-      "test/helpers/**/*"
-    ]
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
