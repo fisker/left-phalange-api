@@ -1,5 +1,6 @@
 import cjs from 'rollup-plugin-commonjs'
-import json from 'rollup-plugin-json'
+// eslint-disable-next-line import/no-unresolved
+import json from '@rollup/plugin-json'
 import {dependencies} from './package.json'
 
 const plugins = [cjs(), json()]

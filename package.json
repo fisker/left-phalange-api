@@ -90,6 +90,7 @@
     "@fisker/husky-config": "1.1.5",
     "@fisker/lint-staged-config": "1.0.8",
     "@fisker/prettier-config": "1.0.24",
+    "@rollup/plugin-json": "4.0.0",
     "ava": "2.4.0",
     "cz-conventional-changelog": "3.0.2",
     "del-cli": "3.0.0",
@@ -102,7 +103,6 @@
     "prettier": "1.19.1",
     "rollup": "1.27.8",
     "rollup-plugin-commonjs": "10.1.0",
-    "rollup-plugin-json": "4.0.0",
     "sort-package-json": "1.30.0",
     "temp-write": "4.0.0"
   },
