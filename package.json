@@ -90,7 +90,7 @@
     "@fisker/husky-config": "1.1.5",
     "@fisker/lint-staged-config": "1.0.8",
     "@fisker/prettier-config": "1.0.24",
-    "@rollup/plugin-commonjs": "11.0.0",
+    "@rollup/plugin-commonjs": "11.0.1",
     "@rollup/plugin-json": "4.0.1",
     "ava": "2.4.0",
     "cz-conventional-changelog": "3.0.2",
