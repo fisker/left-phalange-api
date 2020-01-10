@@ -60,7 +60,9 @@
       "test/fixtures/**/*",
       "test/helpers/**/*"
     ],
-    "require": "esm",
+    "require": [
+      "esm"
+    ],
     "verbose": true
   },
   "nyc": {
