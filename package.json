@@ -109,7 +109,7 @@
     "nyc": "15.0.1",
     "prettier": "2.0.3",
     "rollup": "2.3.3",
-    "sort-package-json": "1.40.0",
+    "sort-package-json": "1.41.0",
     "temp-write": "4.0.0"
   },
   "publishConfig": {
