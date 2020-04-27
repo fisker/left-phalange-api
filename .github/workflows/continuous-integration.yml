@@ -18,7 +18,7 @@ jobs:
           # - "macos-latest"
           # - "windows-latest"
         node_version:
-          # - "13"
+          - "14"
           - "12"
           # - "10"
         # exclude:
