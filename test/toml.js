@@ -5,10 +5,8 @@ const data = {left: 'phalange'}
 const testObject = {
   type: 'toml',
   data,
-  string: `left = "phalange"
-`,
-  prettyString: `left = "phalange"
-`,
+  string: 'left = "phalange"\n',
+  prettyString: 'left = "phalange"\n',
   malformed: 'left= [phalange',
 }
 

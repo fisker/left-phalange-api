@@ -1,6 +1,9 @@
-import {wrap, interopDefault} from '../utils'
+// Rollup can't bundle this, if write in ES Module
 
-const esmRequire = require('esm')(module, {
+const esm = require('esm')
+const {wrap, interopDefault} = require('../utils')
+
+const esmRequire = esm(module, {
   cjs: {
     cache: false,
     extensions: false,
@@ -10,4 +13,4 @@ const esmRequire = require('esm')(module, {
   },
 })
 
-export default wrap(esmRequire, interopDefault)
+module.exports = wrap(esmRequire, interopDefault)
