@@ -10,7 +10,7 @@ test('parse(data)', (t) => {
   )
 })
 
-test(`load('data.xml')`, (t) => {
+test("load('data.xml')", (t) => {
   t.throws(() => {
     loadFromString('left: [phalange', 'data.xml')
   })

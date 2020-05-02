@@ -7,7 +7,7 @@ const testObject = {
   type: 'cjs',
   filename: 'data.js',
   data,
-  string: `module.exports = {left:'phalange'};`,
+  string: "module.exports = {left:'phalange'};",
   prettyString: outdent`
     module.exports = {
       left: 'phalange',

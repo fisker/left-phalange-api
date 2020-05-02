@@ -6,8 +6,8 @@ const testObject = {
   type: 'yaml',
   filename: 'data.yml',
   data,
-  string: `left: phalange\n`,
-  prettyString: `left: phalange\n`,
+  string: 'left: phalange\n',
+  prettyString: 'left: phalange\n',
   malformed: 'left: [phalange',
 }
 

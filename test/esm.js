@@ -7,7 +7,7 @@ const testObject = {
   type: 'esm',
   filename: 'data.mjs',
   data,
-  string: `export default {left:'phalange'};`,
+  string: "export default {left:'phalange'};",
   prettyString: outdent`
     export default {
       left: 'phalange',
