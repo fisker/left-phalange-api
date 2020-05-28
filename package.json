@@ -110,7 +110,7 @@
     "outdent": "0.7.1",
     "prettier": "2.0.5",
     "rollup": "2.11.0",
-    "sort-package-json": "1.43.0",
+    "sort-package-json": "1.44.0",
     "temp-write": "4.0.0"
   },
   "publishConfig": {
