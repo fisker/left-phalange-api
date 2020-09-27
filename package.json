@@ -98,7 +98,7 @@
     "@fisker/prettier-config": "3.1.2",
     "@rollup/plugin-commonjs": "15.1.0",
     "@rollup/plugin-json": "4.1.0",
-    "ava": "3.12.1",
+    "ava": "3.13.0",
     "cz-conventional-changelog": "3.3.0",
     "del-cli": "3.0.1",
     "eslint": "7.10.0",
