@@ -10,4 +10,13 @@ const ini = parserToLoader(parsers.ini)
 const json = parserToLoader(parsers.json)
 const js = esm
 
-export {esm, yaml, json5, toml, js, cjs, json, ini}
+yaml.defaultExtension = 'yaml'
+json5.defaultExtension = 'json5'
+toml.defaultExtension = 'toml'
+ini.defaultExtension = 'ini'
+json.defaultExtension = 'json'
+js.defaultExtension = 'js'
+
+const all = [esm, yaml, json5, toml, js, cjs, json, ini]
+
+export {esm, yaml, json5, toml, js, cjs, json, ini, all}
