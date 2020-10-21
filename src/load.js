@@ -21,6 +21,7 @@ function load(file, options = {}) {
   loader.all.some((specificLoader) => {
     try {
       result = specificLoader(`${file}.${specificLoader.defaultExtension}`)
+      return true // stop trying when successful
     } catch {}
   })
   return result
