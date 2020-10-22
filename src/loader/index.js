@@ -1,4 +1,4 @@
-import {parserToLoader, wrap, interopDefault} from '../utils'
+import {parserToLoader} from '../utils'
 import * as parsers from '../parser'
 import cjs from './cjs'
 import esm from './esm'

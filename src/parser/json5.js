@@ -1,7 +1,7 @@
 import {parse} from 'json5'
 
-function json5Parse(content, options) {
+function parseJson5(content /* , options */) {
   return parse(content)
 }
 
-export default json5Parse
+export default parseJson5

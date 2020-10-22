@@ -1,7 +1,7 @@
 import {parse} from '@iarna/toml'
 
-function tomlParse(content, options) {
+function parseToml(content /* , options */) {
   return parse(content)
 }
 
-export default tomlParse
+export default parseToml

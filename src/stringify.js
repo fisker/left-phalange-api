@@ -1,6 +1,6 @@
 import * as stringifier from './stringifier'
 
-function stringify(data, options = {}) {
+function stringify(data, options) {
   if (typeof options === 'string') {
     options = {
       type: options,
@@ -13,7 +13,10 @@ function stringify(data, options = {}) {
     }
   }
 
-  const {type = 'json'} = options
+  const {type} = {
+    type: 'json',
+    ...options,
+  }
 
   return stringifier[type](data, options)
 }

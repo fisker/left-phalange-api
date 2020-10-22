@@ -1,7 +1,6 @@
 // Rollup can't bundle this, if write in ES Module
 
 const esm = require('esm')
-const {wrap, interopDefault} = require('../utils')
 
 const esmRequire = esm(module, {
   cjs: {
@@ -13,4 +12,8 @@ const esmRequire = esm(module, {
   },
 })
 
-module.exports = wrap(esmRequire, interopDefault)
+function loadEsm(file /* , options */) {
+  return esmRequire(file).default
+}
+
+module.exports = loadEsm

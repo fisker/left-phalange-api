@@ -1,4 +1,7 @@
 import json5Stringify from './json5'
-import {wrap} from '../utils'
 
-export default wrap(json5Stringify, (string) => `export default ${string};`)
+function stringifyEsm(data, options) {
+  return `export default  ${json5Stringify(data, options)}`
+}
+
+export default stringifyEsm
