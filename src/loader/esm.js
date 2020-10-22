@@ -13,7 +13,8 @@ const esmRequire = esm(module, {
 })
 
 function loadEsm(file /* , options */) {
-  return esmRequire(file).default
+  const module = esmRequire(file)
+  return module.default ? module.default : module
 }
 
 module.exports = loadEsm
