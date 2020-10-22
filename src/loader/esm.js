@@ -12,9 +12,16 @@ const esmRequire = esm(module, {
   },
 })
 
+function interopDefault(module) {
+  if (typeof module === 'object' && 'default' in module) {
+    return module.default
+  }
+
+  return module
+}
+
 function loadEsm(file /* , options */) {
-  const module = esmRequire(file)
-  return module.default ? module.default : module
+  return interopDefault(esmRequire(file))
 }
 
 module.exports = loadEsm
