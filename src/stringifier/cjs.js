@@ -1,7 +1,7 @@
-import json5Stringify from './json5'
+export {stringifyCjs}
+import {stringifyJson5} from './json5.js'
 
 function stringifyCjs(data, options) {
-  return `module.exports = ${json5Stringify(data, options)};`
+  return `module.exports = ${stringifyJson5(data, options)};`
 }
 
-export default stringifyCjs

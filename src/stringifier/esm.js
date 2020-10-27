@@ -1,7 +1,7 @@
-import json5Stringify from './json5'
+export {stringifyEsm}
+import {stringifyJson5} from './json5.js'
 
 function stringifyEsm(data, options) {
-  return `export default ${json5Stringify(data, options)};`
+  return `export default ${stringifyJson5(data, options)};`
 }
 
-export default stringifyEsm

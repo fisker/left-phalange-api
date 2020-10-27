@@ -1,4 +1,6 @@
-import {safeDump} from 'js-yaml'
+export {stringifyYaml}
+import pkg from 'js-yaml';
+const {safeDump} = pkg;
 
 function stringifyYaml(data, options) {
   const {pretty, sort} = {
@@ -14,4 +16,3 @@ function stringifyYaml(data, options) {
   })
 }
 
-export default stringifyYaml

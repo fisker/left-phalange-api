@@ -1,3 +1,4 @@
+export {stringifyIni}
 import {encode} from 'ini'
 
 function stringifyIni(data, options) {
@@ -10,4 +11,3 @@ function stringifyIni(data, options) {
   })
 }
 
-export default stringifyIni

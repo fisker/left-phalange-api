@@ -1,11 +1,5 @@
-import load from './load'
-import parse from './parse'
-import stringify from './stringify'
-
-export default {
-  load,
-  parse,
-  stringify,
-}
-
 export {load, parse, stringify}
+
+import {load} from './load.js'
+import {parse} from './parse.js'
+import {stringify} from './stringify.js'

@@ -1,6 +1,7 @@
 {
   "name": "@grossacasacs/left-phalange",
   "version": "2.0.0",
+  "type": "module",
   "description": "CommonJS, ESModule, INI, JSON, JSON5, TOML, YAML data loader, parser and stringifier",
   "keywords": [
     "data",

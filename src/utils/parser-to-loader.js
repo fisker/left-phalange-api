@@ -1,3 +1,4 @@
+export {parserToLoader}
 import {readFileSync} from 'fs'
 
 function parserToLoader(parser) {
@@ -11,4 +12,3 @@ function parserToLoader(parser) {
   }
 }
 
-export default parserToLoader

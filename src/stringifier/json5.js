@@ -1,4 +1,6 @@
-import {stringify} from 'json5'
+export {stringifyJson5}
+import pkg from 'json5';
+const {stringify} = pkg;
 
 function stringifyJson5(data, options) {
   const {pretty} = {
@@ -8,4 +10,3 @@ function stringifyJson5(data, options) {
   return pretty ? stringify(data, undefined, 2) : stringify(data)
 }
 
-export default stringifyJson5

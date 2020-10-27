@@ -1,3 +1,4 @@
+export { getFileType}
 import {extname} from 'path'
 
 const fileTypes = {
@@ -11,4 +12,3 @@ function getFileType(file) {
   return fileTypes[extension] || extension.slice(1)
 }
 
-export default getFileType

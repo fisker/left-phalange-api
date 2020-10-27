@@ -1,3 +1,5 @@
+
+export {parseJson}
 import parse from 'parse-json'
 
 function parseJson(content, options) {

@@ -1,4 +1,6 @@
-import {safeLoad} from 'js-yaml'
+export {parseYaml}
+import pkg from 'js-yaml';
+const {safeLoad} = pkg;
 
 function parseYaml(content, options) {
   const {filename} = {
@@ -8,4 +10,3 @@ function parseYaml(content, options) {
   return safeLoad(content, {filename})
 }
 
-export default parseYaml

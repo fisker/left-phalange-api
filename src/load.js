@@ -1,8 +1,12 @@
-import {parse as parseFile} from 'path'
-import * as loader from './loader'
-import {getFileType} from './utils'
 
-function load(file, options) {
+
+export {load}
+
+import {parse as parseFile} from 'path'
+import * as loader from './loader/index.js'
+import {getFileType} from './utils/get-file-type.js'
+
+function load(file, options={}) {
   if (typeof options === 'string') {
     options = {
       type: options,
@@ -27,5 +31,3 @@ function load(file, options) {
   })
   return result
 }
-
-export default load
