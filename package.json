@@ -96,7 +96,7 @@
     "@fisker/husky-config": "3.1.1",
     "@fisker/lint-staged-config": "2.2.0",
     "@fisker/prettier-config": "3.1.2",
-    "@rollup/plugin-commonjs": "15.1.0",
+    "@rollup/plugin-commonjs": "16.0.0",
     "@rollup/plugin-json": "4.1.0",
     "ava": "3.13.0",
     "cz-conventional-changelog": "3.3.0",
