@@ -81,7 +81,6 @@
   },
   "dependencies": {
     "@iarna/toml": "2.2.5",
-    "ansi-colors": "4.1.1",
     "esm": "3.2.25",
     "import-fresh": "3.2.1",
     "ini": "1.3.5",
