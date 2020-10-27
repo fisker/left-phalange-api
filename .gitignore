@@ -94,3 +94,5 @@ typings/
 
 # project ignore files
 dist/
+test-sac.mjs
+notes.txt

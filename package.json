@@ -1,6 +1,6 @@
 {
-  "name": "left-phalange-api",
-  "version": "1.3.1",
+  "name": "@grossacasacs/left-phalange",
+  "version": "2.0.0",
   "description": "CommonJS, ESModule, INI, JSON, JSON5, TOML, YAML data loader, parser and stringifier",
   "keywords": [
     "data",
