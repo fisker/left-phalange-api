@@ -96,3 +96,4 @@ typings/
 dist/
 test-sac.mjs
 notes.txt
+lux.yaml
