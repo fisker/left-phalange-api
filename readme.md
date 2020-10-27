@@ -114,4 +114,6 @@ stringify({left: 'phalange'}, {type: 'json5', pretty: true})
 
 ## License
 
-MIT © [fisker Cheung](https://github.com/fisker)
+MIT © 
+ - [fisker Cheung](https://github.com/fisker)
+ - GrosSacASac (after 2020-27-10)
