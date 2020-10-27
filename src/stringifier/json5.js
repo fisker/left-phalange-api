@@ -1,7 +1,11 @@
 import {stringify} from 'json5'
 
-function json5Stringify(data, {pretty = false} = {}) {
-  return pretty ? stringify(data, null, 2) : stringify(data)
+function stringifyJson5(data, options) {
+  const {pretty} = {
+    pretty: false,
+    ...options,
+  }
+  return pretty ? stringify(data, undefined, 2) : stringify(data)
 }
 
-export default json5Stringify
+export default stringifyJson5

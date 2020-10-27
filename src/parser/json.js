@@ -1,7 +1,11 @@
-import parseJson from 'parse-json'
+import parse from 'parse-json'
 
-function jsonParse(content, {filename = ''} = {}) {
-  return filename ? parseJson(content, filename) : parseJson(content)
+function parseJson(content, options) {
+  const {filename} = {
+    filename: '',
+    ...options,
+  }
+  return filename ? parse(content, filename) : parse(content)
 }
 
-export default jsonParse
+export default parseJson

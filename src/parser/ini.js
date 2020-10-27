@@ -1,7 +1,7 @@
 import {decode} from 'ini'
 
-function iniParse(content, options) {
+function parseIni(content /* , options */) {
   return decode(String(content))
 }
 
-export default iniParse
+export default parseIni

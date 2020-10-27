@@ -2,12 +2,13 @@ import {parse as parseFile} from 'path'
 import * as loader from './loader'
 import {getFileType} from './utils'
 
-function load(file, options = {}) {
+function load(file, options) {
   if (typeof options === 'string') {
     options = {
       type: options,
     }
   }
+
 
   const {type = getFileType(file)} = options
   const parsed = parseFile(file)

@@ -1,7 +1,7 @@
 import {stringify} from '@iarna/toml'
 
-function tomlStringify(data, options) {
+function stringifyToml(data /* , options */) {
   return stringify(data)
 }
 
-export default tomlStringify
+export default stringifyToml
