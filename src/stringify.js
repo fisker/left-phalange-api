@@ -13,8 +13,7 @@ function stringify(data, options) {
     }
   }
 
-  const {type} = {
-    type: 'json',
+  const {type = 'json'} = {
     ...options,
   }
 
