@@ -110,7 +110,7 @@
     "nyc": "15.1.0",
     "outdent": "0.8.0",
     "prettier": "2.3.0",
-    "rollup": "2.48.0",
+    "rollup": "2.51.1",
     "sort-package-json": "1.50.0",
     "temp-write": "5.0.0"
   },
