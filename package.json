@@ -72,8 +72,7 @@
     "reporter": [
       "lcov",
       "text"
-    ],
-    "require": "esm"
+    ]
   },
   "dependencies": {
     "@iarna/toml": "2.2.5",
