@@ -1,7 +1,6 @@
 import test from 'ava'
-
-import {parse, load, stringify} from '../src'
-import loadFromString from './helpers/load-from-string'
+import {parse} from '../lib/index.js'
+import loadFromString from './helpers/load-from-string.js'
 
 test('parse(data)', (t) => {
   t.deepEqual(
@@ -10,13 +9,13 @@ test('parse(data)', (t) => {
   )
 })
 
-test("load('data.xml')", (t) => {
-  t.throws(() => {
-    loadFromString('left: [phalange', 'data.xml')
+test("load('data.xml')", async (t) => {
+  await t.throwsAsync(async () => {
+    await loadFromString('left: [phalange', 'data.xml')
   })
 
   t.deepEqual(
-    loadFromString('left = phalange', 'data.yml'),
+    await loadFromString('left = phalange', 'data.yml'),
     parse('left = phalange')
   )
 })

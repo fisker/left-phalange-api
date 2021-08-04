@@ -1,11 +1,11 @@
 import {outdent} from 'outdent'
-import testRunner from './helpers/test-runner'
+import testRunner from './helpers/test-runner.js'
 
 const data = {left: 'phalange'}
 
 const testObject = {
   type: 'cjs',
-  filename: 'data.js',
+  filename: 'data.cjs',
   data,
   string: "module.exports = {left:'phalange'};",
   prettyString: outdent`
