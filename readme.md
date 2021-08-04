@@ -31,11 +31,11 @@ import {parse, load, stringify} from 'left-phalange-api'
 examples:
 
 ```js
-load('path/to/data.json')
+await load('path/to/data.json')
 
-load('path/to/data', 'yaml')
+await load('path/to/data', 'yaml')
 
-load('path/to/data', {type: 'toml'})
+await load('path/to/data', {type: 'toml'})
 ```
 
 ### parse(string[, options])

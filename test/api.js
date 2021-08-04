@@ -1,7 +1,7 @@
 import test from 'ava'
 
-import {parse, load, stringify} from '../src'
-import loadFromString from './helpers/load-from-string'
+import {parse} from '../lib/index.js'
+import loadFromString from './helpers/load-from-string.js'
 
 test('parse(data)', (t) => {
   t.deepEqual(

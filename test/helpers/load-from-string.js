@@ -1,8 +1,8 @@
-import {sync as temporaryWrite} from 'temp-write'
-import {load} from '../../src'
+import temporaryWrite from 'temp-write'
+import {load} from '../../lib/index.js'
 
 function loadFileFromString(string, fileName, options) {
-  const file = temporaryWrite(string, fileName)
+  const file = temporaryWrite.sync(string, fileName)
   return load(file, options)
 }
 

@@ -1,4 +1,4 @@
-import testRunner from './helpers/test-runner'
+import testRunner from './helpers/test-runner.js'
 
 const data = {left: 'phalange'}
 

@@ -1,6 +1,6 @@
 import test from 'ava'
-import {parse, stringify} from '../../src'
-import loadFromString from './load-from-string'
+import {parse, stringify} from '../../lib/index.js'
+import loadFromString from './load-from-string.js'
 
 function testRunner(testObject) {
   const {
@@ -35,18 +35,20 @@ function testRunner(testObject) {
     }
   }
 
-  test('load(filename)', (t) => {
-    t.deepEqual(loadFromString(string, filename), data)
+  test('load(filename)', async (t) => {
+    t.deepEqual(await loadFromString(string, filename), data)
   })
 
-  test('load(filename, type)', (t) => {
-    t.deepEqual(loadFromString(string, 'data.xml', type), data)
-  })
+  if (type !== 'esm') {
+    test('load(filename, type)', async (t) => {
+      t.deepEqual(await loadFromString(string, 'data.xml', type), data)
+    })
+  }
 
   if (malformed) {
-    test('load(malformed)', (t) => {
-      t.throws(() => {
-        loadFromString(malformed, filename, type)
+    test('load(malformed)', async (t) => {
+      await t.throwsAsync(async () => {
+        await loadFromString(malformed, filename, type)
       })
     })
   }
