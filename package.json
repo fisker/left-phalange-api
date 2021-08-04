@@ -32,7 +32,7 @@
   "type": "module",
   "exports": "./lib/index.js",
   "files": [
-    "dist"
+    "lib"
   ],
   "scripts": {
     "build": "echo no need",
@@ -66,9 +66,6 @@
     "verbose": true
   },
   "nyc": {
-    "include": [
-      "src/**"
-    ],
     "reporter": [
       "lcov",
       "text"
