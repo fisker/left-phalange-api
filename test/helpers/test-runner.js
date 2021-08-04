@@ -39,7 +39,7 @@ function testRunner(testObject) {
     t.deepEqual(await loadFromString(string, filename), data)
   })
 
-  if (type !== 'esm') {
+  if (type !== 'esm' && type !== 'cjs') {
     test('load(filename, type)', async (t) => {
       t.deepEqual(await loadFromString(string, 'data.xml', type), data)
     })
