@@ -1,7 +1,7 @@
 {
   "name": "left-phalange-api",
   "version": "2.0.0",
-  "description": "CommonJS, ESModule, INI, JSON, JSON5, TOML, YAML data loader, parser and stringifier",
+  "description": "YAML, TOML, JSON, JSON5, INI, CSV, ES Module, CommonJS data loader, parser and stringifier",
   "keywords": [
     "data",
     "ini",
@@ -14,7 +14,8 @@
     "stringifier",
     "stringify",
     "toml",
-    "yaml"
+    "yaml",
+    "csv"
   ],
   "homepage": "https://github.com/fisker/left-phalange-api#readme",
   "bugs": {
@@ -72,6 +73,8 @@
     ]
   },
   "dependencies": {
+    "@fast-csv/format": "4.3.5",
+    "@fast-csv/parse": "4.3.6",
     "@iarna/toml": "2.2.5",
     "import-fresh": "3.3.0",
     "ini": "2.0.0",
