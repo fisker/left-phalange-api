@@ -1,6 +1,6 @@
 {
   "name": "left-phalange-api",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "YAML, TOML, JSON, JSON5, INI, CSV, ES Module, CommonJS data loader, parser and stringifier",
   "keywords": [
     "data",
