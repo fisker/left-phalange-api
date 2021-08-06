@@ -1,6 +1,6 @@
 # left-phalange-api
 
-> CommonJS, ESModule, INI, JSON, JSON5, TOML, YAML data loader, parser and stringifier
+> YAML, TOML, JSON, JSON5, INI, CSV, ES Module, CommonJS data loader, parser and stringifier
 
 ## Install
 
@@ -26,7 +26,7 @@ import {parse, load, stringify} from 'left-phalange-api'
   - `options.type`
 - options.type
   - Data type of `file`
-  - Should be one of `cjs`, `esm`, `ini`, `js`, `json`, `json5`, `toml`, `yaml`
+  - Should be one of `cjs`, `esm`, `ini`, `js`, `json`, `json5`, `toml`, `yaml`, `csv`
 
 examples:
 
@@ -52,20 +52,20 @@ await load('path/to/data', {type: 'toml'})
 - options.type
   - Data type of `string`
   - Default `yaml`
-  - Should be one of `ini`, `json`, `json5`, `toml`, `yaml`
+  - Should be one of `ini`, `json`, `json5`, `toml`, `yaml`, `csv`
 - options.filename
   - Filename displayed in the error message.
 
 examples:
 
 ```js
-parse('{"left": "phalange"}')
+await parse('{"left": "phalange"}')
 
-parse('{"left": "phalange"}', 'json')
+await parse('{"left": "phalange"}', 'json')
 
-parse('left = "phalange"', {type: 'toml'})
+await parse('left = "phalange"', {type: 'toml'})
 
-parse('left = phalange', {filename: 'path/to/data.yml'})
+await parse('left = phalange', {filename: 'path/to/data.yml'})
 ```
 
 ### stringify(data[, options])
@@ -83,7 +83,7 @@ parse('left = phalange', {filename: 'path/to/data.yml'})
 - options.type
   - Data type of `string`
   - Default `json`
-  - Should be one of `cjs`, `esm`, `ini`, `json`, `json5`
+  - Should be one of `cjs`, `esm`, `ini`, `json`, `json5`, `csv`
 - options.pretty
   - Pretty output
   - Default `false`
@@ -91,18 +91,18 @@ parse('left = phalange', {filename: 'path/to/data.yml'})
 examples:
 
 ```js
-stringify({left: 'phalange'})
+await stringify({left: 'phalange'})
 // {"left": "phalange"}
 
-stringify({left: 'phalange'}, 'toml')
+await stringify({left: 'phalange'}, 'toml')
 // left = "phalange"
 
-stringify({left: 'phalange'}, true)
+await stringify({left: 'phalange'}, true)
 // {
 //   "left": "phalange"
 // }
 
-stringify({left: 'phalange'}, {type: 'json5', pretty: true})
+await stringify({left: 'phalange'}, {type: 'json5', pretty: true})
 // {
 //   left: 'phalange',
 // }
@@ -111,7 +111,3 @@ stringify({left: 'phalange'}, {type: 'json5', pretty: true})
 ## Related
 
 - [left-phalange](https://github.com/fisker/left-phalange) - CLI for this module
-
-## License
-
-MIT © [fisker Cheung](https://github.com/fisker)
