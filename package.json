@@ -80,7 +80,7 @@
     "ini": "2.0.0",
     "js-yaml": "4.1.0",
     "json5": "2.2.0",
-    "parse-json": "5.2.0"
+    "parse-json": "6.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "14.1.0",
