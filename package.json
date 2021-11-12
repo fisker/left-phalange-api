@@ -100,7 +100,7 @@
     "nyc": "15.1.0",
     "outdent": "0.8.0",
     "prettier": "2.4.1",
-    "sort-package-json": "1.52.0",
+    "sort-package-json": "1.53.1",
     "temp-write": "5.0.0"
   },
   "publishConfig": {
