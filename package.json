@@ -92,7 +92,7 @@
     "ava": "4.2.0",
     "cz-conventional-changelog": "3.3.0",
     "del-cli": "4.0.1",
-    "eslint": "8.15.0",
+    "eslint": "8.17.0",
     "husky": "8.0.1",
     "lint-staged": "12.4.1",
     "markdownlint-cli": "0.31.1",
