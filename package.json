@@ -79,7 +79,7 @@
     "import-fresh": "3.3.0",
     "ini": "3.0.1",
     "js-yaml": "4.1.0",
-    "json5": "2.2.1",
+    "json5": "2.2.3",
     "parse-json": "6.0.2"
   },
   "devDependencies": {
